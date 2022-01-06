@@ -1,0 +1,8 @@
+apply from: "$rootDir/common-android-library.gradle"
+
+dependencies {
+    implementation Dependencies.AndroidX.coreKtx
+    implementation Dependencies.AndroidX.Navigation.fragmentKtx
+    implementation Dependencies.AndroidX.Navigation.uiKtx
+    implementation Dependencies.AndroidX.Navigation.dynamicFeaturesFragment
+}

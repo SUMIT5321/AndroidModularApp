@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/onboarding_flow"
+    app:startDestination="@id/onboardingFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.vinsol.onboarding.OnboardingFragment">
+        <action
+            android:id="@+id/action_onboardingFragment_to_nextFragment"
+            app:destination="@id/nextFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nextFragment"
+        android:name="com.vinsol.onboarding.NextFragment" >
+
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="example://next" />
+    </fragment>
+
+</navigation>

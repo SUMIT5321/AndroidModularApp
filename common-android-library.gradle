@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+android {
+    compileSdkVersion ConfigData.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion ConfigData.minSdkVersion
+        targetSdkVersion ConfigData.targetSdkVersion
+        versionCode ConfigData.versionCode
+        versionName ConfigData.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "$rootDir/app/proguard-rules.pro"
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation Dependencies.Kotlin.stdLibJdk8
+
+    implementation Dependencies.AndroidX.coreKtx
+    implementation Dependencies.AndroidX.appCompat
+    implementation Dependencies.Google.material
+    implementation Dependencies.AndroidX.constraintLayout
+
+    implementation Dependencies.AndroidX.Navigation.fragmentKtx
+    implementation Dependencies.AndroidX.Navigation.uiKtx
+}

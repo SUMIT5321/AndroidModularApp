@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk ConfigData.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.vinsol.templateapp3"
+
+        minSdk ConfigData.minSdkVersion
+        targetSdk ConfigData.targetSdkVersion
+        versionCode ConfigData.versionCode
+        versionName ConfigData.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dynamicFeatures = [':features:onboarding', ':features:dashboard']
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    // module dependencies
+    implementation project(Modules.commonApp)
+    implementation project(Modules.commonDomain)
+    implementation project(Modules.core)
+    implementation project(Modules.navigation)
+    //implementation project(path: Modules.onboarding, configuration: 'default')
+
+
+    implementation Dependencies.AndroidX.coreKtx
+    implementation Dependencies.AndroidX.appCompat
+    implementation Dependencies.Google.material
+    implementation Dependencies.AndroidX.constraintLayout
+
+    ////////////// Navigation //////////////////
+    implementation Dependencies.AndroidX.Navigation.fragmentKtx
+    implementation Dependencies.AndroidX.Navigation.uiKtx
+    implementation Dependencies.AndroidX.Navigation.dynamicFeaturesFragment
+    androidTestImplementation Dependencies.AndroidX.Navigation.testing
+
+    /////////// Dagger hilt ////////////
+    implementation Dependencies.Google.Hilt.hiltAndroid
+    kapt Dependencies.Google.Hilt.compiler
+    androidTestImplementation Dependencies.Google.Hilt.androidTesting
+    kaptAndroidTest Dependencies.Google.Hilt.androidCompiler
+    testImplementation Dependencies.Google.Hilt.androidTesting
+    kaptTest Dependencies.Google.Hilt.androidCompiler
+
+    // core testing
+    testImplementation Dependencies.Junit.junit
+    androidTestImplementation Dependencies.AndroidX.Test.extJunit
+    androidTestImplementation Dependencies.AndroidX.Test.espressoCore
+}
