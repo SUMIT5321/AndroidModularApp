@@ -16,8 +16,8 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:text="@string/nav_to_home_flow"
-        android:id="@+id/navigate_to_home_btn"
+        android:text="@string/nav_to_onboarding_flow"
+        android:id="@+id/navigate_to_onboarding_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dashboard_lbl"
@@ -29,7 +29,7 @@
         android:id="@+id/navigate_to_next_deeplink"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/navigate_to_home_btn"
+        app:layout_constraintTop_toBottomOf="@id/navigate_to_onboarding_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.vinsol.commonui.R
+import com.vinsol.commonui.bases.BaseFragment
 import com.vinsol.navigation.NavigationFlow
-import com.vinsol.navigation.ToFlowNavigatable
 
-class StartFragment : Fragment() {
+class StartFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,8 +22,8 @@ class StartFragment : Fragment() {
         // decide where to go on the first app launch, check auth tokens if login needed etc...
         (0..1).random().let {
             when (it) {
-                0 -> (requireActivity() as ToFlowNavigatable).navigateToFlow(NavigationFlow.OnboardingFlow)
-                1 -> (requireActivity() as ToFlowNavigatable).navigateToFlow(NavigationFlow.DashboardFlow("From start fragment"))
+                0 -> navigator.navigateToFlow(NavigationFlow.OnboardingFlow)
+                1 -> navigator.navigateToFlow(NavigationFlow.DashboardFlow("From start fragment"))
             }
         }
     }

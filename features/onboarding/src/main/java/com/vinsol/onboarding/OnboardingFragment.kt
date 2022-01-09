@@ -5,13 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.vinsol.commonui.bases.BaseFragment
 import com.vinsol.navigation.NavigationFlow
-import com.vinsol.navigation.ToFlowNavigatable
 
 
-class OnboardingFragment : Fragment() {
+class OnboardingFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,7 +27,7 @@ class OnboardingFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.to_dashboard_flow).setOnClickListener {
-            (requireActivity() as ToFlowNavigatable).navigateToFlow(NavigationFlow.DashboardFlow("From home fragment"))
+            navigator.navigateToFlow(NavigationFlow.DashboardFlow("From onboarding fragment"))
         }
     }
 }
