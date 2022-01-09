@@ -1,5 +1,6 @@
-apply from: "$rootDir/common-android-dynamic-feature.gradle"
+apply from: "$rootDir/common-android-library.gradle"
 
 dependencies {
-    // add required dependencies here
+    implementation project(Modules.navigation)
+    implementation project(Modules.commonUI)
 }

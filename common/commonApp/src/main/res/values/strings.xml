@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">MultiModuleNavigationExample</string>
-    <string name="title_onboarding">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-</resources>

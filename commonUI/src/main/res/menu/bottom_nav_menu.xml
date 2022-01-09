@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/onboarding_flow"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_onboarding" />
+
+    <item
+        android:id="@id/dashboard_flow"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_dashboard" />
+</menu>

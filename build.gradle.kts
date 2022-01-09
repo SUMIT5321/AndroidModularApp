@@ -9,6 +9,7 @@ buildscript {
         classpath(Dependencies.kotlin.gradlePlugin)
         classpath(Dependencies.google.hilt.gradlePlugin)
         classpath(Dependencies.androidX.navigation.safeArgPlugin)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
     }
 }
 

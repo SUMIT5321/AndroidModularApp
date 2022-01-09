@@ -1,19 +1,9 @@
-//dependencyResolutionManagement {
-//    repositoriesMode.set(org.gradle.api.initialization.resolve.RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-//    repositories {
-//        google()
-//        mavenCentral()
-//    }
-//}
-
 rootProject.name = "TemplateApp3"
 
-include(
-    ":app",
-    ":core",
-    ":common:commonDomain",
-    ":common:commonApp",
-    ":features:onboarding",
-    "features:dashboard",
-)
+include(":app")
+include(":features:onboarding")
+include(":features:dashboard")
 include(":navigation")
+include(":domain")
+include(":data")
+include(":commonUI")

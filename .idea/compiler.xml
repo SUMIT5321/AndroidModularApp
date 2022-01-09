@@ -6,8 +6,12 @@
       <module name="TemplateApp3.buildSrc" target="11" />
       <module name="TemplateApp3.common.app" target="11" />
       <module name="TemplateApp3.common.commonApp" target="11" />
+      <module name="TemplateApp3.common.commonDomain" target="1.8" />
       <module name="TemplateApp3.commonApp" target="11" />
+      <module name="TemplateApp3.commonUI" target="11" />
+      <module name="TemplateApp3.core" target="1.8" />
       <module name="TemplateApp3.dashboard" target="11" />
+      <module name="TemplateApp3.data" target="11" />
       <module name="TemplateApp3.features.dashboard" target="11" />
       <module name="TemplateApp3.features.onboarding" target="11" />
       <module name="TemplateApp3.navigation" target="11" />

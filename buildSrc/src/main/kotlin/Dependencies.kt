@@ -19,7 +19,6 @@ object Dependencies {
             const val safeArgPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
             const val fragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
             const val uiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
-            const val dynamicFeaturesFragment = "androidx.navigation:navigation-dynamic-features-fragment:${Versions.navigation}"
             const val testing = "androidx.navigation:navigation-testing:${Versions.navigation}"
         }
 
@@ -57,7 +56,7 @@ object Dependencies {
 
         val hilt = Hilt
         object Hilt {
-            const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltPlugin}"
+            const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
             const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hilt}"
             const val compiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
             const val androidTesting = "com.google.dagger:hilt-android-testing:${Versions.hilt}"
@@ -66,8 +65,7 @@ object Dependencies {
 
         object Versions {
             const val material = "1.4.0"
-            const val hilt = "2.38.1"
-            const val hiltPlugin = "2.40.5"
+            const val hilt = "2.40.5"
         }
     }
 

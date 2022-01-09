@@ -1,5 +1,0 @@
-apply from: "$rootDir/common-kotlin-library.gradle"
-
-dependencies {
-    // add any dependency specific to this module
-}
