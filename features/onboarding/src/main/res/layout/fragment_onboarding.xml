@@ -1,40 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".OnboardingFragment">
 
-    <TextView
-        android:id="@+id/home_lbl"
-        android:textSize="20sp"
+    <com.vinsol.onboarding.CustomCircularEdgesButton
+        android:id="@+id/cceb_take_to_drops"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:backgroundTheme="blue"
         app:layout_constraintTop_toTopOf="parent"
+        app:title="TAKE ME TO THE DROPS" />
+
+    <com.vinsol.onboarding.CustomCircularEdgesButton
+        android:id="@+id/cceb_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        app:backgroundTheme="transparent"
+        app:icon_left="@drawable/ic_left_arrow_blue"
+        app:layout_constraintEnd_toStartOf="@id/gdl_vertical_half"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cceb_take_to_drops"
+        app:title="BACK" />
+
+    <com.vinsol.onboarding.CustomCircularEdgesButton
+        android:id="@+id/cceb_skip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp"
+        app:backgroundTheme="blue"
+        app:icon_right="@drawable/ic_right_arrow_white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gdl_vertical_half"
+        app:layout_constraintTop_toTopOf="@id/cceb_back"
+        app:title="SKIP" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_vertical_half"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/onboarding_fragment" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.vinsol.onboarding.CustomCircularEdgesButton
+        android:id="@+id/cceb_join_the_drop"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:backgroundTheme="blue"
+        app:icon_left="@drawable/ic_thunder_white"
+        app:layout_constraintTop_toBottomOf="@id/cceb_back"
+        app:title="Join the drop!" />
 
     <Button
         android:id="@+id/to_next_fragment_btn"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/home_lbl"
-        android:text="@string/to_next_fragment"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:text="@string/to_next_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cceb_take_to_drops" />
 
 
     <Button
         android:id="@+id/to_dashboard_flow"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/to_next_fragment_btn"
-        android:text="@string/to_dashboard"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/to_dashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_next_fragment_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
