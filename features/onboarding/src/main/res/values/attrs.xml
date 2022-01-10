@@ -3,7 +3,7 @@
     <declare-styleable name="CustomCircularEdgesButton">
         <attr name="title" format="string" />
         <attr name="backgroundTheme" format="enum">
-            <enum name="white" value="0" />
+            <enum name="transparent" value="0" />
             <enum name="blue" value="1" />
         </attr>
     </declare-styleable>

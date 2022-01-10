@@ -14,7 +14,7 @@ import androidx.appcompat.content.res.AppCompatResources
  This represents a Custom view of a button with curved edges from all four ends of 24dp.
  Attributes defined in this view are (defined in attrs.xml):
  1. title -> name of the CTA.
- 2. backgroundTheme -> themes for the button white and blue.
+ 2. backgroundTheme -> themes for the button transparent and blue.
  */
 @RequiresApi(Build.VERSION_CODES.M)
 class CustomCircularEdgesButton(context: Context, attrs: AttributeSet?) :
@@ -44,18 +44,19 @@ class CustomCircularEdgesButton(context: Context, attrs: AttributeSet?) :
         tvTitle.text = titleText
 
         when (backgroundTheme) {
+            BackgroundTheme.TRANSPARENT -> {
+                tvTitle.setTextColor(context.getColor(R.color.blue_2c43dd))
+                background =
+                    AppCompatResources.getDrawable(context, R.drawable.background_theme_transparent)
+            }
+
             BackgroundTheme.BLUE -> {
                 tvTitle.setTextColor(Color.WHITE)
                 background =
                     AppCompatResources.getDrawable(context, R.drawable.background_theme_blue)
             }
-            BackgroundTheme.WHITE -> {
-                tvTitle.setTextColor(context.getColor(R.color.blue_2c43dd))
-                background =
-                    AppCompatResources.getDrawable(context, R.drawable.background_theme_white)
-            }
         }
     }
 }
 
-enum class BackgroundTheme { WHITE, BLUE }
+enum class BackgroundTheme { TRANSPARENT, BLUE }
