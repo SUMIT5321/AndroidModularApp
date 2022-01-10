@@ -6,5 +6,7 @@
             <enum name="transparent" value="0" />
             <enum name="blue" value="1" />
         </attr>
+        <attr name="icon_left" format="reference" />
+        <attr name="icon_right" format="reference" />
     </declare-styleable>
 </resources>
