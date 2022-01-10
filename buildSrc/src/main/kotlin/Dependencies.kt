@@ -13,6 +13,7 @@ object Dependencies {
         const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
         const val appCompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+        const val dataStore = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
 
         val navigation = Navigation
         object Navigation {
@@ -20,6 +21,12 @@ object Dependencies {
             const val fragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
             const val uiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
             const val testing = "androidx.navigation:navigation-testing:${Versions.navigation}"
+        }
+
+        val lifecycle = Lifecycle
+        object Lifecycle {
+            const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+            const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
         }
 
         val test = Test
@@ -33,6 +40,8 @@ object Dependencies {
             const val appcompat = "1.4.0"
             const val constraintLayout = "2.1.2"
             const val navigation = "2.3.5"
+            const val dataStore = "1.0.0"
+            const val lifecycle = "2.4.0"
 
             // test
             const val extJunit = "1.1.3"
@@ -44,9 +53,11 @@ object Dependencies {
     object Kotlin {
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
         const val stdLibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
 
         object  Versions {
             const val kotlin = "1.6.10"
+            const val coroutines = "1.6.0"
         }
     }
 
