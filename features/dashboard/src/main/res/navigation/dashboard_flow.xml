@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@id/dashboard_flow"
     app:startDestination="@id/dashboardFragment">
 
@@ -16,5 +17,30 @@
         <deepLink
             android:id="@+id/deepLink"
             app:uri="example://dashboard/exampleArgs?msg={msg}" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_coinsListFragment"
+            app:destination="@id/coinsListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinsListFragment"
+        android:name="com.vinsol.dashboard.coinList.CoinsListFragment"
+        android:label="CoinsListFragment"
+        tools:layout="@layout/fragment_coin_list">
+        <action
+            android:id="@+id/action_coinsListFragment_to_coinDetailsFragment"
+            app:destination="@id/coinDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinDetailsFragment"
+        android:name="com.vinsol.dashboard.coinDetails.CoinDetailsFragment"
+        android:label="CoinDetailsFragment"
+        tools:layout="@layout/fragment_coin_details">
+        <argument
+            android:name="coinId"
+            app:argType="string"
+            android:defaultValue=" " />
     </fragment>
 </navigation>

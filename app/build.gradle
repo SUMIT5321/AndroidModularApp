@@ -67,6 +67,12 @@ dependencies {
     testImplementation Dependencies.Google.Hilt.androidTesting
     kaptTest Dependencies.Google.Hilt.androidCompiler
 
+    // retrofit
+    implementation Dependencies.Square.Retrofit2.retrofit
+    implementation Dependencies.Square.Retrofit2.convertorGson
+    implementation Dependencies.Square.Okhttp3.loggingInterceptor
+    implementation Dependencies.Square.Okhttp3.okHttp
+
     // core testing
     testImplementation Dependencies.Junit.junit
     androidTestImplementation Dependencies.AndroidX.Test.extJunit

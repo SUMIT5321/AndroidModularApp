@@ -1,6 +1,16 @@
 apply from: "$rootDir/common-android-library.gradle"
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
+
 
 dependencies {
     implementation project(Modules.navigation)
     implementation project(Modules.commonUI)
+    implementation project(Modules.domain)
+
+    // hilt
+    implementation Dependencies.Google.Hilt.hiltAndroid
+    kapt Dependencies.Google.Hilt.compiler
+
+    implementation Dependencies.flowLayout
 }

@@ -6,4 +6,10 @@ dependencies {
     implementation Dependencies.AndroidX.dataStore
     implementation Dependencies.AndroidX.Lifecycle.runtimeKtx
     implementation Dependencies.AndroidX.Lifecycle.liveDataKtx
+
+    // retrofit
+    implementation Dependencies.Square.Retrofit2.retrofit
+    implementation Dependencies.Square.Retrofit2.convertorGson
+    implementation Dependencies.Square.Okhttp3.loggingInterceptor
+    implementation Dependencies.Square.Okhttp3.okHttp
 }

@@ -1,4 +1,4 @@
-package com.vinsol.domain.commonService
+package com.vinsol.domain.service
 
 import kotlinx.coroutines.flow.Flow
 

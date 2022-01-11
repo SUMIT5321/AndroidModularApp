@@ -1,14 +1,13 @@
-package com.vinsol.data
+package com.vinsol.data.service
 
 import android.app.Application
 import android.content.Context
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.vinsol.domain.commonService.LocalPreferencesService
+import com.vinsol.domain.service.LocalPreferencesService
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-
 
 private const val MY_PREFERENCES = "my_preferences"
 private val Context.dataStore by preferencesDataStore(

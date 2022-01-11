@@ -3,4 +3,5 @@
     <string name="dashboard">Dashboard</string>
     <string name="nav_to_onboarding_flow">Navigate to onboarding flow</string>
     <string name="nav_to_next">Navigate to next fragment via deeplink</string>
+    <string name="nav_to_coins_List">Navigate to Coins List</string>
 </resources>

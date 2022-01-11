@@ -88,4 +88,33 @@ object Dependencies {
             const val junit = "4.+"
         }
     }
+
+    val square = Square
+    object Square {
+        val retrofit2 = Retrofit2
+        object Retrofit2 {
+            const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+            const val convertorGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+
+            object Versions {
+                const val retrofit = "2.9.0"
+            }
+        }
+
+        val okhttp3 = Okhttp3
+        object Okhttp3 {
+            const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+            const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
+
+            object Versions {
+                const val okhttp = "4.9.3"
+            }
+        }
+    }
+
+    const val flowLayout = "com.nex3z:flow-layout:${Versions.flowLayout}"
+
+    object Versions {
+        const val flowLayout = "1.3.3"
+    }
 }

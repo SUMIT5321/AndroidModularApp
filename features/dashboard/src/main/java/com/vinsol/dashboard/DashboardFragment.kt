@@ -35,6 +35,10 @@ class DashboardFragment : BaseFragment() {
             findNavController().deepLinkNavigateTo(DeepLinkDestination.Next)
         }
 
+        view.findViewById<Button>(R.id.navigate_to_coin_list_btn).setOnClickListener {
+            findNavController().navigate(DashboardFragmentDirections.actionDashboardFragmentToCoinsListFragment())
+        }
+
         dashboardFragmentArgs.msg.let {
             if (it.isNotEmpty()) {
                 Toast.makeText(requireContext(), dashboardFragmentArgs.msg, Toast.LENGTH_SHORT).show()
